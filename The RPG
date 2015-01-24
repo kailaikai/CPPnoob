@@ -1,0 +1,127 @@
+//
+//  main.cpp
+//  Text RPG
+//
+//  Created by Afonso Ribeiro on 24/01/15.
+//  Copyright (c) 2015 Afonso Ribeiro. All rights reserved.
+//
+
+#include <iostream>
+#include "stdio.h"
+using namespace std;
+
+int main()
+{
+    int nSwitch;
+FirstMenu:
+    cout << "Made by Afonso Ribeiro." << endl << "1. Start Game!" << endl << "2. Enter Code. (Really?)" << endl << "3. Exit." << endl << endl;
+    cin >> nSwitch;
+    switch (nSwitch)
+    {
+        case 1:
+            cout << "You wake up on the middle of a desert. You have nothing, just your underwear, a backpack, and your brain. You see a light, what will you do?"  << endl << "1. Follow the Light." << endl << "2. Wait until sunrise (It's cold, and you are near freezing.)" << endl << endl;
+            int tSwitch;
+            cin >> tSwitch;
+            switch (tSwitch)
+        {
+            case 1:
+            SecondMenu:
+                cout << "As you get nearer the light, you get more freezing... Maybe you have something in your backpack. What will you do?" << endl << "1. Check Backpack." << endl << "2. Keep walking." << endl << endl;
+                int vSwitch;
+                cin >> vSwitch;
+                switch (vSwitch)
+            {
+                    case 1:
+                    cout << "You find a leather jacket, 5 dollars, a golden coin, a notebook, a knife, and some rope. You also found condoms... ( ͡° ͜ʖ ͡°)" << endl << endl;
+                    goto SecondMenu;
+                    break;
+                    case 2:
+                    cout << "You keep walking... walking... for like 5 miles... until you find a city. They welcome you. They give you a wool sweater, a pair of jeans, and some shoes. They don't speak the same language as you, but they give you a map. The map shows the local area and the nearest cities. You're somewhere near Arabia, from what you can see of the geography. They let you stay for a night." << endl << "1. Sleep." << endl << endl;
+                        int lSwitch;
+                        cin >> lSwitch;
+                        switch (lSwitch)
+                {
+                    case 1:
+                    ThirdMenu:
+                        cout << "You sleep... You wake up. You get dressed, look at the map, and go to the city of Akhlamashef (This does not contain real geography...). " << endl << "1. Check Backpack." << endl << "2. Search Local Area." << endl << "3. Go straight to Akhlamashef." << endl << endl;
+                        int qSwitch;
+                        cin >> qSwitch;
+                        switch (qSwitch)
+                    {
+                            case 1:
+                            cout << "You have a wool sweater, a pair of jeans, shoes, a leather jacket, a golden coin, a notebook, a knife, rope, and condoms. " << endl << endl;
+                            goto ThirdMenu;
+                                break;
+                        case 2:
+                            cout << "While you wander through the area, you find a compass, rope. You start wondering about how you will get to that city. You find someone selling a camel. What will you do?" << endl << "1. Exchange your golden coin." << endl << "2. Steal the camel." << endl << "3. Exchange sexual tasks for the camel." << endl << endl;
+
+                            int cSwitch;
+                            cin >> cSwitch;
+                            switch (cSwitch)
+                        {
+                                case 1:
+                            FourthMenu:
+                                cout << "You look at the coin. It has something inscripted on it. The seller quickly takes the coin, and suspiciously he hides it really well. You wrap the wool sweater around your face, put your leather jacket, tighten up the jeans, and leave to Akhlamashef..." << endl << endl << "You reach the city. It's very populated, but it's a rather poor city. There are a lot of marketers on the streets. You find some money on the middle of the roads, you don't know if it's enough for anything, but it's worth the shot." << endl << "1. Buy Food." << endl << "2. Buy a prostitute." << endl << "3. Eat the coins." << endl << endl;
+                                int gSwitch;
+                                cin >> gSwitch;
+                                switch (gSwitch)
+                            
+                            {
+                                    case 1:
+                                    cout << "You buy some food. Your hunger is at 90%" << endl << endl;
+                                        break;
+                                case 2:
+                                    cout << "Prostitutes are bad, and you should feel bad." << endl << endl;
+                                    goto FourthMenu;
+                                    break;
+                                case 3:
+                                    cout << "For some reason, eating coins that feel on the ground of a poor city on a poor country that you never even went is bad. You die.";
+                                    break;
+                                }
+                                
+                                        break;
+                                case 2:
+                                cout << "The seller looks somewhere eles, you quickly take the camel and leave. Too bad camels are slow, and he shot at you. You get wounded, without medical attention and die." << endl;
+                                case 3:
+                                cout << "You got AIDS." << endl;
+                                    cin.get();
+                                break;
+                            }
+                            break;
+                    }
+                    case 3:
+                        cout << "Guess what? Usually in the desert it's 40ºC. You would have to walk there for like, a day. You died. Get good." << endl;
+                        cin.get();
+                        break;
+                        
+                        
+                    
+                }
+                    
+                }
+                break;
+                
+            case 2:
+                cout << "As you try to fall asleep, you get colder and colder, until you can't take it anymore and you freeze to death (told you)." << endl;
+                cin.get();
+                break;
+                
+            default:
+                cout << "Don't break the game rules, it ain't even funny...";
+                cin.get();
+                break;
+        }
+            break;
+        case 2:
+            cout << "No codes for now!" << endl;
+            goto FirstMenu;
+            break;
+            
+        case 3:
+            cout << "You're mean! 3:";
+            cin.get();
+            break;
+    }
+    cin.get();
+    return 0;
+}

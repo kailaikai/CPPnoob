@@ -1,0 +1,59 @@
+//
+//  main.cpp
+//  Converter
+//
+//  Created by Afonso Ribeiro on 24/01/15.
+//  Copyright (c) 2015 Afonso Ribeiro. All rights reserved.
+//
+
+#include <iostream>
+#include "stdio.h"
+
+using namespace std;
+
+int main()
+{
+    int nSwitch;
+    int fahrenheit;
+    int celsius;
+    int feet;
+    int meters;
+
+FirstMenu:
+    cout << "Afonso's Converter. Make a selection: " << endl << "1. Fahrenheit to Celsius." << endl << "2. Celsius to Fahrenheit." << endl << "3. Feet to Meters." << endl << "4. Meters to Feet." << endl << "5. Exit." << endl << endl;
+    cin >> nSwitch;
+    switch (nSwitch)
+    {
+        case 1:
+            cout << "Insert value in degrees Fahrenheit: ";
+            cin >> fahrenheit;
+            cout << fahrenheit << "ºF = " << (fahrenheit - 32) * 5/9 << "ºC" << endl << endl;
+            goto FirstMenu;
+            break;
+        case 2:
+            cout << "Insert value in degrees Celsius: ";
+            cin >> celsius;
+            cout << celsius << "ºC = " << celsius * 9/5 + 32 << "ºF." << endl << endl;
+            goto FirstMenu;
+            break;
+        case 3:
+            cout << "Insert value in feet: ";
+            cin >> feet;
+            cout << feet << " feet = " << feet / 3.2 << " meters." << endl << endl;
+            goto FirstMenu;
+            break;
+        case 4:
+            cout << "Insert value in meters: ";
+            cin >> meters;
+            cout << meters << " meters = " << meters * 3.2 << " feet." << endl << endl;
+            goto FirstMenu;
+            break;
+        case 5:
+            return 0;
+        default:
+            cout << "Invalid Key..." << endl << endl;
+            goto FirstMenu;
+            break;
+    }
+    cin.get();
+}

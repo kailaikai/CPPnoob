@@ -68,7 +68,40 @@ FirstMenu:
                             
                             {
                                     case 1:
-                                    cout << "You buy some food. Your hunger is at 90%" << endl << endl;
+                                    cout << "You buy some food. Your hunger is at 90%" << endl << endl << "You check the map, you're near the saara desert. You need to get home, you don't have a passport, and you don't have money. Probably you can have someone forging a passport, or maybe go to an Embassy. You find an embassy." << endl << endl << "1. Go inside." << endl << endl;
+                                    int aSwitch;
+                                    cin >> aSwitch;
+                                    switch (aSwitch)
+                                {
+                                        case 1:
+                                        cout << "You go inside the embassy. They say you have no proof of your nationality, and they can't really do anything." << endl << endl << "1. Show them the dollar." << endl << endl;
+                                        int fSwitch;
+                                        cin >> fSwitch;
+                                        switch (fSwitch)
+                                    {
+                                            case 1:
+                                            cout << "You show them the dollar. They say they still don't have proof." << endl << endl << "1. Have sex with him." << endl << endl;
+                                            int wSwitch;
+                                            cin >> wSwitch;
+                                            switch (wSwitch)
+                                        {
+                                                case 1:
+                                                cout << "They awkwardly look at the condom. It's from a very known american brand. You ask if they can do anything, and they say the passport process can take a long time, up to a year, however, they may speed it up if you bribe them. You leave, and go get some money." << endl << endl << endl;
+                                                cout << "-CHAPTER 2-" << endl << endl << endl;
+                                                cout << "1. Find Quest:" << endl << "2. Go Around City," << endl << "3. Go find food." << endl << endl;
+                                                    break;
+                                                    
+
+                                            }
+                                                break;
+                                                
+
+                                        }
+                                            break;
+                                            
+
+                                    }
+                                    
                                         break;
                                 case 2:
                                     cout << "Prostitutes are bad, and you should feel bad." << endl << endl;
@@ -76,7 +109,9 @@ FirstMenu:
                                     break;
                                 case 3:
                                     cout << "For some reason, eating coins that feel on the ground of a poor city on a poor country that you never even went is bad. You die.";
+                                                                        cin.get();
                                     break;
+
                                 }
                                 
                                         break;

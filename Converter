@@ -4,12 +4,12 @@
 //
 //  Created by Afonso Ribeiro on 24/01/15.
 //  Copyright (c) 2015 Afonso Ribeiro. All rights reserved.
-//
+//  Made using XCode 6
 
 #include <iostream>
 #include "stdio.h"
 
-using namespace std;
+using namespace std; // To avoid, for example, std::cout or std::cin.
 
 int main()
 {
@@ -18,42 +18,110 @@ int main()
     int celsius;
     int feet;
     int meters;
+    int liters;
+    int gallons;
+    int kg;
+    int pounds;
+    // int all of the options at the beggining, to avoid syntax errors.
 
 FirstMenu:
-    cout << "Afonso's Converter. Make a selection: " << endl << "1. Fahrenheit to Celsius." << endl << "2. Celsius to Fahrenheit." << endl << "3. Feet to Meters." << endl << "4. Meters to Feet." << endl << "5. Exit." << endl << endl;
+    cout << "Afonso's Converter. Make a selection: " << endl << "1. Fahrenheit to Celsius." << endl << "2. Celsius to Fahrenheit." << endl << "3. Feet to Meters." << endl << "4. Meters to Feet." << endl << "5. Litres to UK Gallons." << endl << "6. UK Gallons to Litres." << endl << "7. Kilograms to Pounds." << endl << "8. Pounds to Kilograms." << endl << "9. Exit" << endl << endl << "Choice: "; // Choice for aesthetical purposes.
     cin >> nSwitch;
+    cout << endl << endl;
     switch (nSwitch)
     {
         case 1:
             cout << "Insert value in degrees Fahrenheit: ";
             cin >> fahrenheit;
             cout << fahrenheit << "ºF = " << (fahrenheit - 32) * 5/9 << "ºC" << endl << endl;
-            goto FirstMenu;
+            // Goes to second menu, where user can either go back to the main menu or exit the program.
+            goto SecondMenu;
             break;
         case 2:
             cout << "Insert value in degrees Celsius: ";
             cin >> celsius;
-            cout << celsius << "ºC = " << celsius * 9/5 + 32 << "ºF." << endl << endl;
-            goto FirstMenu;
+            cout << celsius << "ºC = " << celsius * 9/5 + 32  << "ºF." << endl << endl; // I needed to add the calculation/variants here since that it's easier than typing it at the beggining, and doing this fixed bad calculus, like 32ºC = 1239869ºF (Not true).
+            goto SecondMenu;
+
             break;
         case 3:
             cout << "Insert value in feet: ";
             cin >> feet;
             cout << feet << " feet = " << feet / 3.2 << " meters." << endl << endl;
-            goto FirstMenu;
+            goto SecondMenu;
+
             break;
         case 4:
             cout << "Insert value in meters: ";
             cin >> meters;
             cout << meters << " meters = " << meters * 3.2 << " feet." << endl << endl;
-            goto FirstMenu;
+            goto SecondMenu;
+
             break;
         case 5:
+            cout << "Insert value in Liters: ";
+            cin >> liters;
+            cout << liters << " liters = " << liters * 0.22 << " UK gallons." << endl << endl;
+            goto SecondMenu;
+
+            break;
+        case 6:
+            cout << "Insert value in UK Gallons: ";
+            cin >> gallons;
+            cout << gallons << " UK gallons = " << gallons / 0.22 << " liters." << endl << endl;
+            goto SecondMenu;
+
+            break;
+        case 7:
+            cout << "Insert value in Kilograms: ";
+            cin >> kg;
+            cout << kg << " kilograms = " << kg * 2.2 << " pounds." << endl << endl;
+            goto SecondMenu;
+
+            break;
+        case 8:
+            cout << "Insert value in Pounds: ";
+            cin >> pounds;
+            cout << pounds << " pounds = " << pounds / 2.2 << " kilograms." << endl << endl;
+            goto SecondMenu;
+
+            break;
+            
+        case 9:
+            // Exits the Program
             return 0;
+        
         default:
-            cout << "Invalid Key..." << endl << endl;
+            cout << "Invalid Number..." << endl << endl;
+            // For smartasses who like to type things out of the usual.
             goto FirstMenu;
             break;
     }
+SecondMenu: // Second Menu is used so that I don't have to type this every switch/case, automatically goes here using goto.
+    cout << "1. Go back to Main Menu." << endl << "2. Exit." << endl << endl << "Choice: ";
+    // Added choice for aesthetical purposes. It looks prettier :)
+    int tSwitch;
+    cin >> tSwitch;
+    cout << endl << endl;
+    switch (tSwitch)
+    {
+        case 1:
+            goto FirstMenu; // First Menu, Main menu, the one with all the converting options.
+            break;
+            
+        case 2:
+            cout << "Made by Afonso Ribeiro. All rights reserved.";
+            // Damn right.
+            cin.get();
+            break;
+        default:
+            cout << "Invalid Number..." << endl << endl;
+            // Something made for smartasses too!
+            goto SecondMenu;
+            break;
+    }
+
     cin.get();
 }
+
+// Hope you enjoy this! Use it as you like, but if you take this and say it's yours you're screwed.

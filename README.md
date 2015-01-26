@@ -1,0 +1,3 @@
+# CPPnoob
+I'm a noob at C++, really... 
+Here I will post all of my C++ projects, as well as some drafts I create just for fun.

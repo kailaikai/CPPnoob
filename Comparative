@@ -1,0 +1,37 @@
+//
+//  main.cpp
+//  Number 1-2
+//
+//  Created by Afonso Ribeiro on 25/01/15.
+//  Copyright (c) 2015 Afonso Ribeiro. All rights reserved.
+//
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, const char * argv[])
+{
+    int Number1;
+    int Number2;
+FirstMenu:
+    cout << "Please insert the First Number: ";
+    cin >> Number1;
+    cout << "Please insert the Second Number: ";
+    cin >> Number2;
+    if (Number1 < Number2)
+    {
+        cout << Number1 << " is minor than " << Number2 << endl << endl;
+        goto FirstMenu;
+    }
+    if (Number1 == Number2)
+    {
+        cout << Number1 << " is equal to " << Number2 << endl << endl;
+        goto FirstMenu;
+    }
+    if (Number1 > Number2)
+    {
+        cout << Number1 << " is bigger than " << Number2 << endl << endl;
+        goto FirstMenu;
+    }
+    
+}

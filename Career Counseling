@@ -1,0 +1,56 @@
+//
+//  main.cpp
+//  CareerDecisionMaker
+//
+//  Created by Afonso Ribeiro on 25/01/15.
+//  Copyright (c) 2015 Afonso Ribeiro. All rights reserved.
+//
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, const char * argv[])
+{
+    int english;
+    int math;
+FirstMenu:
+    cout << "Welcome to Afonso's career counselor. Please, " << endl;
+    cout << "Insert your last Math test result: ";
+    cin >> math;
+    cout << endl << "Now, insert your English test result: ";
+    cin >> english;
+    if (math+english > 180 && math+english < 200)
+    {
+        cout << "Dedicate yourself to study the environment, for you either will be a teacher, a scientist, a doctor, or very probably an hobo or you'll just work at McDonald's." << endl << endl;
+        goto FirstMenu;
+    }
+    if (math + english >120 && math + english < 180)
+    {
+        cout << "Mining Engineering is for you! Go for it boy!" << endl << endl;
+        goto FirstMenu;
+    }
+    if (math+english > 20 && math+english <120)
+    {
+        cout << "You're one dumb fucker ain't you? Just go for McDonald's. A salaryman's life is also good for you. You should bet on it. And whatever you do, just don't invest on the stock market, you'll get poorer than you are already..." << endl << endl;
+        goto FirstMenu;
+    }
+    if (math+english > 0 && math+english <20)
+    {
+        cout << "u dumb nigga, go live in da street wit da niggas, u ain't gettin betta than this!" << endl << endl;
+        goto FirstMenu;
+    }
+    if (math+english > 200)
+    {
+        cout << "You 'lil rebel, I like you!" << endl << endl;
+        goto FirstMenu;
+        
+    }
+    if (math+english < 0)
+    {
+        cout << "You 'lil rebel, I like you!" << endl << endl;
+        goto FirstMenu;
+        
+    }
+    
+    return 0;
+}

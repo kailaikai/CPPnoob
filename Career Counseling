@@ -36,7 +36,7 @@ FirstMenu:
     }
     if (math+english > 0 && math+english <20)
     {
-        cout << "u dumb nigga, go live in da street wit da niggas, u ain't gettin betta than this!" << endl << endl;
+        cout << "u dumb." << endl << endl;
         goto FirstMenu;
     }
     if (math+english > 200)
